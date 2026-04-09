@@ -11,14 +11,14 @@ config_version=5
 [application]
 
 config/name="Hang_Me_Maybe"
-run/main_scene="uid://bbcrr68hi7yuj"
+run/main_scene="uid://bkwyefs005epq"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=400
-window/size/viewport_height=400
+window/size/viewport_width=1400
+window/size/viewport_height=800
 
 [physics]
 

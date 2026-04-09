@@ -1,0 +1,151 @@
+[gd_scene format=3 uid="uid://bkwyefs005epq"]
+
+[ext_resource type="Script" uid="uid://bwx8260d3lfkc" path="res://hang_me_maybe.gd" id="1_6pamj"]
+[ext_resource type="FontFile" uid="uid://dkygjsvch0ilt" path="res://fonts/Xolonium-Regular.ttf" id="2_4e1rj"]
+[ext_resource type="Texture2D" uid="uid://cjm2w0i4vwmi8" path="res://assets/error1.png" id="3_4e1rj"]
+[ext_resource type="Texture2D" uid="uid://bvndrtrexd13l" path="res://assets/error2.png" id="4_2hedj"]
+[ext_resource type="Texture2D" uid="uid://dapnnj0p4lvgi" path="res://assets/error3.png" id="5_jkaqb"]
+[ext_resource type="Texture2D" uid="uid://bmiwvftuhby6c" path="res://assets/error4.png" id="6_nk5y4"]
+[ext_resource type="Texture2D" uid="uid://dmt06b6srr3pr" path="res://assets/error5.png" id="7_704hf"]
+[ext_resource type="Texture2D" uid="uid://cm3ah5yekcpdm" path="res://assets/error6.png" id="8_o45s8"]
+[ext_resource type="Texture2D" uid="uid://bx13hgqaqn553" path="res://assets/error7.png" id="9_x4blr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2hedj"]
+font = ExtResource("2_4e1rj")
+font_size = 78
+
+[sub_resource type="LabelSettings" id="LabelSettings_4e1rj"]
+font = ExtResource("2_4e1rj")
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_6pamj"]
+font = ExtResource("2_4e1rj")
+font_size = 30
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cjd4q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_4e1rj")
+}],
+"loop": true,
+"name": &"Error1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_2hedj")
+}],
+"loop": true,
+"name": &"Error2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_jkaqb")
+}],
+"loop": true,
+"name": &"Error3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_nk5y4")
+}],
+"loop": true,
+"name": &"Error4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_704hf")
+}],
+"loop": true,
+"name": &"Error5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_o45s8")
+}],
+"loop": true,
+"name": &"Error6",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_x4blr")
+}],
+"loop": true,
+"name": &"Error7",
+"speed": 5.0
+}]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_jkaqb"]
+specular_color = Color(0.6095755, 1, 0.7654822, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jkaqb"]
+font_size = 36
+
+[node name="HangMeMaybe" type="Node2D" unique_id=1803483986]
+position = Vector2(680, 192)
+script = ExtResource("1_6pamj")
+
+[node name="Title" type="Label" parent="." unique_id=181398773]
+offset_left = -408.0
+offset_top = -192.0
+offset_right = 392.0
+offset_bottom = -92.0
+size_flags_vertical = 1
+text = "Hang Me Maybe"
+label_settings = SubResource("LabelSettings_2hedj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LetterPressed" type="LineEdit" parent="." unique_id=1657825604]
+visible = false
+offset_left = -32.0
+offset_top = -48.0
+offset_right = 36.5
+offset_bottom = -17.0
+max_length = 1
+
+[node name="Guess" type="Label" parent="." unique_id=1669498877]
+offset_left = -160.0
+offset_top = 48.0
+offset_right = 140.0
+offset_bottom = 148.0
+label_settings = SubResource("LabelSettings_4e1rj")
+
+[node name="Error" type="Label" parent="." unique_id=546609391]
+texture_filter = 2
+offset_left = -268.0
+offset_top = 179.0
+offset_right = 185.0
+offset_bottom = 216.0
+label_settings = SubResource("LabelSettings_6pamj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ErrorAnim" type="Sprite2D" parent="." unique_id=546255809]
+position = Vector2(-478, 413)
+scale = Vector2(0.83064514, 0.776)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ErrorAnim" unique_id=2064639841]
+position = Vector2(2.4077759, 2.5773125)
+sprite_frames = SubResource("SpriteFrames_cjd4q")
+animation = &"Error7"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=898080004]
+modulate = Color(0.69726634, 0.82653683, 0.9956625, 1)
+z_index = -5
+position = Vector2(21.625, 211.50003)
+scale = Vector2(1400.75, 803.00006)
+texture = SubResource("CanvasTexture_jkaqb")
+
+[node name="Score" type="Label" parent="." unique_id=1574277449]
+offset_left = -88.0
+offset_top = 371.0
+offset_right = 109.0
+offset_bottom = 449.0
+label_settings = SubResource("LabelSettings_jkaqb")
